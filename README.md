@@ -127,3 +127,6 @@ React
 Bootstrap
 React Toastify
 Material UI
+
+![wEATHER APP FILE STRUCTURE](https://github.com/user-attachments/assets/3a73f28e-679c-4b1e-9dc2-cfb6a5179ff3)
+
