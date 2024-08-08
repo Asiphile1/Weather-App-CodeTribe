@@ -13,10 +13,9 @@ function App() {
     setInput('');
   };
 
-  const formatDayOfWeek = (timestamp) => {
-    const date = new Date(timestamp * 1000); 
-    const options = { weekday: 'long' }; 
-    return new Intl.DateTimeFormat('en-US', options).format(date);
+  const formatTime = (timestamp) => {
+    const date = new Date(timestamp * 1000);
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
   return (
@@ -52,17 +51,27 @@ function App() {
         />
 
         <div className='flex justify-center gap-8 flex-wrap w-[60%]'>
-          {
-            values?.slice(0, 6).map(curr => (
-              <MiniCard
-                key={curr.dt} 
-                day={formatDayOfWeek(curr.dt)} 
-                time={new Date(curr.dt * 1000).toLocaleTimeString()} 
-                temp={curr.main.temp} 
-                iconString={curr.weather[0].main} 
-              />
-            ))
-          }
+          {values?.slice(0, 6).map(curr => (
+            <MiniCard
+              key={curr.dt}
+              day={new Date(curr.dt * 1000).toLocaleDateString('en-US', { weekday: 'long' })}
+              time={formatTime(curr.dt)}
+              temp={curr.main.temp}
+              iconString={curr.weather[0].main}
+            />
+          ))}
+        </div>
+
+        {/* Hourly Updates Section */}
+        <div className='flex justify-center overflow gap-4 w-full py-4'>
+          {values?.slice(0, 24).map((hourData, index) => (
+            <MiniCard
+              key={index}
+              time={formatTime(hourData.dt)}
+              temp={hourData.main.temp}
+              iconString={hourData.weather[0].main}
+            />
+          ))}
         </div>
       </main>
     </div>

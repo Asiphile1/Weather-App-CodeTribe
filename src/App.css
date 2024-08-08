@@ -1,0 +1,23 @@
+/* App.css */
+.flex {
+    display: flex;
+  }
+  
+  .overflow-x-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .gap-4 {
+    gap: 1rem;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
