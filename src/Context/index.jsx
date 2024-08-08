@@ -38,7 +38,7 @@ export const StateContextProvider = ({ children }) => {
 
         } catch (e) {
             console.error(e);
-            alert('This place does not exist');
+            alert('This place does not exist, try a place on earth please');
         }
     };
 
