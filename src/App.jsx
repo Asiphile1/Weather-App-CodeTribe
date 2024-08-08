@@ -79,3 +79,19 @@ function App() {
 }
 
 export default App;
+
+
+
+// {/* Hourly Updates Section */}
+// <div className='flex overflow-x-scroll gap-4 w-full py-4'>
+// {getCurrentHourData()?.map((hourData, index) => (
+//   <MiniCard
+//     key={index}
+//     time={formatTime(hourData.dt)}
+//     temp={hourData.main.temp}
+//     iconString={hourData.weather[0].main}
+//   />
+// ))}
+// </div>
+// </main>
+// </div>
