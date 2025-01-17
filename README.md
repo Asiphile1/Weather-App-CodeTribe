@@ -13,25 +13,29 @@ To run this project locally, follow these steps:
 
 Clone the repository:
 
-bash
-Copy code
+```bash
+
 git clone https://github.com/Asiphile1/Weather-App-CodeTribe.git
 cd weather-app
+```
 Install dependencies:
 
-bash
-Copy code
+```bash
+
 npm install
+```
 Create a .env file in the root of the project and add your OpenWeather API key:
 
-plaintext
-Copy code
+```
+
 VITE_API_KEY=your_openweather_api_key_here
+```
 Start the development server:
 
-bash
-Copy code
+```bash
+
 npm run dev
+```
 Open your browser and go to http://localhost:3000.
 
 ## Usage
