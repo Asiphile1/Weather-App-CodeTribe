@@ -1,6 +1,8 @@
 # Weather App
 A React-based Weather Application that provides current weather conditions and hourly forecasts for any city. The app uses the OpenWeather API to fetch weather data and displays it with a user-friendly interface.
 
+## hosted link: https://weather-app-code-tribe.vercel.app/
+
 ## Features
 * Search by City: Users can search for weather information by entering the name of any city.
 * Current Weather: Displays the current weather conditions including temperature, wind speed, and humidity.
